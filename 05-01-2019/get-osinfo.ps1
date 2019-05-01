@@ -1,21 +1,23 @@
 
-    param (
-        [Parameter(mandatory=$true,
-        HelpMessage="pls")]
-        [string]$ComputerName
+param (
+    [Parameter(mandatory=$true,
+    HelpMessage="pls")]
+    [string[]]$ComputerName
 
 
-    )
+)
+Begin
+{
 
+
+}
+
+Process 
+{
+        
     Foreach ($Computer in $ComputerName)
     {
-        Begin 
-        {
 
-
-        }
-        Process 
-        {
             try 
             { 
 
@@ -56,11 +58,12 @@
                 Write-output $Output
 
             }
-        }
-        end
-        {
 
-
-        }
     }
+}
 
+End
+{
+
+
+}
